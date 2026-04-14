@@ -17,7 +17,7 @@ def orden_copilacion(dependencias: list):
     dependencias = list(filter(lambda dep: conteo[dep[0]], dependencias))
     if not dependencias:
         for clave, valor in conteo.items():
-            if valor != 0:
+            if valor:
                 resultado.append(clave)
     return resultado + orden_copilacion(dependencias)
 
